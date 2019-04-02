@@ -16,7 +16,7 @@ final class WikipediaSearchViewModel {
     init(searchWord: Observable<String>, wikipediaAPI: WikipediaAPI) {
         wikipediaPages = searchWord
             .filter { $0.count >= 3 }
-            .flatMapLatest { wikipediaAPI.search(from: $0) }
+            .flatMapLatest { wikipediaAPI.search(from: $0).catchErrorJustReturn([]) }
             .share(replay: 1)
     }
 }
