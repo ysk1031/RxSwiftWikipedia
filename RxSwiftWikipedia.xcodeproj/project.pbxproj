@@ -12,6 +12,11 @@
 		F21B48682253454A00404FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21B48662253454A00404FCC /* Main.storyboard */; };
 		F21B486A2253454C00404FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21B48692253454C00404FCC /* Assets.xcassets */; };
 		F21B486D2253454C00404FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21B486B2253454C00404FCC /* LaunchScreen.storyboard */; };
+		F21B48772253496300404FCC /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21B48752253496300404FCC /* RxSwift.framework */; };
+		F21B48782253496300404FCC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21B48762253496300404FCC /* RxCocoa.framework */; };
+		F21B487B22534A1900404FCC /* WikipediaSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B487A22534A1900404FCC /* WikipediaSearchViewModel.swift */; };
+		F21B487D22534A7700404FCC /* WikipediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B487C22534A7700404FCC /* WikipediaPage.swift */; };
+		F21B487F22534C3400404FCC /* WikipediaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B487E22534C3400404FCC /* WikipediaAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		F21B48692253454C00404FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21B486C2253454C00404FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21B486E2253454C00404FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21B48752253496300404FCC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F21B48762253496300404FCC /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F21B487A22534A1900404FCC /* WikipediaSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaSearchViewModel.swift; sourceTree = "<group>"; };
+		F21B487C22534A7700404FCC /* WikipediaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPage.swift; sourceTree = "<group>"; };
+		F21B487E22534C3400404FCC /* WikipediaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21B48772253496300404FCC /* RxSwift.framework in Frameworks */,
+				F21B48782253496300404FCC /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +52,7 @@
 			children = (
 				F21B48612253454A00404FCC /* RxSwiftWikipedia */,
 				F21B48602253454A00404FCC /* Products */,
+				F21B48742253496300404FCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +67,26 @@
 		F21B48612253454A00404FCC /* RxSwiftWikipedia */ = {
 			isa = PBXGroup;
 			children = (
+				F21B486E2253454C00404FCC /* Info.plist */,
 				F21B48622253454A00404FCC /* AppDelegate.swift */,
 				F21B48642253454A00404FCC /* ViewController.swift */,
-				F21B48662253454A00404FCC /* Main.storyboard */,
+				F21B487E22534C3400404FCC /* WikipediaAPI.swift */,
+				F21B487C22534A7700404FCC /* WikipediaPage.swift */,
+				F21B487A22534A1900404FCC /* WikipediaSearchViewModel.swift */,
 				F21B48692253454C00404FCC /* Assets.xcassets */,
 				F21B486B2253454C00404FCC /* LaunchScreen.storyboard */,
-				F21B486E2253454C00404FCC /* Info.plist */,
+				F21B48662253454A00404FCC /* Main.storyboard */,
 			);
 			path = RxSwiftWikipedia;
+			sourceTree = "<group>";
+		};
+		F21B48742253496300404FCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F21B48762253496300404FCC /* RxCocoa.framework */,
+				F21B48752253496300404FCC /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +99,7 @@
 				F21B485B2253454A00404FCC /* Sources */,
 				F21B485C2253454A00404FCC /* Frameworks */,
 				F21B485D2253454A00404FCC /* Resources */,
+				F21B4879225349A000404FCC /* Carthage Run Script */,
 			);
 			buildRules = (
 			);
@@ -130,12 +156,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F21B4879225349A000404FCC /* Carthage Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = "Carthage Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F21B485B2253454A00404FCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F21B48652253454A00404FCC /* ViewController.swift in Sources */,
+				F21B487B22534A1900404FCC /* WikipediaSearchViewModel.swift in Sources */,
+				F21B487F22534C3400404FCC /* WikipediaAPI.swift in Sources */,
+				F21B487D22534A7700404FCC /* WikipediaPage.swift in Sources */,
 				F21B48632253454A00404FCC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +336,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C9TZF26K4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSwiftWikipedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +358,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C9TZF26K4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSwiftWikipedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
