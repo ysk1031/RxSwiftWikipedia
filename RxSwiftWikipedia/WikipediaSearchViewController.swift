@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WikipediaSearchViewController.swift
 //  RxSwiftWikipedia
 //
 //  Created by Yusuke Aono on 2019/04/02.
@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class ViewController: UIViewController {
+final class WikipediaSearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -28,5 +28,11 @@ final class ViewController: UIViewController {
                 cell.detailTextLabel?.text = result.url.absoluteString
             }
             .disposed(by: disposeBag)
+        viewModel.error.subscribe(onNext: { error in
+            if let error = error as? URLError, error.code == URLError.notConnectedToInternet {
+                print(error)
+            }
+        })
+        .disposed(by: disposeBag)
     }
 }

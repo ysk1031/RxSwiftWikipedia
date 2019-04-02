@@ -12,11 +12,14 @@ import RxCocoa
 
 final class WikipediaSearchViewModel {
     let wikipediaPages: Observable<[WikipediaPage]>
+    let error: Observable<Error>
     
     init(searchWord: Observable<String>, wikipediaAPI: WikipediaAPI) {
-        wikipediaPages = searchWord
+        let sequence = searchWord
             .filter { $0.count >= 3 }
-            .flatMapLatest { wikipediaAPI.search(from: $0).catchErrorJustReturn([]) }
+            .flatMapLatest { wikipediaAPI.search(from: $0).materialize() }
             .share(replay: 1)
+        wikipediaPages = sequence.elements()
+        error = sequence.errors()
     }
 }

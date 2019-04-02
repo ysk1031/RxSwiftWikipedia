@@ -33,8 +33,6 @@ final class WikipediaDefaultAPI: WikipediaAPI {
         ]
         components.queryItems = items
         
-        print(word)
-        
         let request = URLRequest(url: components.url!)
         return urlSession.rx.response(request: request)
             .map { response, data in
