@@ -18,6 +18,7 @@
 		F21B487D22534A7700404FCC /* WikipediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B487C22534A7700404FCC /* WikipediaPage.swift */; };
 		F21B487F22534C3400404FCC /* WikipediaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B487E22534C3400404FCC /* WikipediaAPI.swift */; };
 		F2271C4E225362490075729E /* ObservableTypeEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2271C4D225362490075729E /* ObservableTypeEx.swift */; };
+		F24483332254B5DB004E3D78 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24483322254B5DB004E3D78 /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F21B487C22534A7700404FCC /* WikipediaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPage.swift; sourceTree = "<group>"; };
 		F21B487E22534C3400404FCC /* WikipediaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaAPI.swift; sourceTree = "<group>"; };
 		F2271C4D225362490075729E /* ObservableTypeEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeEx.swift; sourceTree = "<group>"; };
+		F24483322254B5DB004E3D78 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				F21B486E2253454C00404FCC /* Info.plist */,
 				F21B48622253454A00404FCC /* AppDelegate.swift */,
 				F2271C4D225362490075729E /* ObservableTypeEx.swift */,
+				F24483322254B5DB004E3D78 /* ViewModelType.swift */,
 				F21B487E22534C3400404FCC /* WikipediaAPI.swift */,
 				F21B487C22534A7700404FCC /* WikipediaPage.swift */,
 				F21B48642253454A00404FCC /* WikipediaSearchViewController.swift */,
@@ -193,6 +196,7 @@
 				F21B487F22534C3400404FCC /* WikipediaAPI.swift in Sources */,
 				F21B487D22534A7700404FCC /* WikipediaPage.swift in Sources */,
 				F21B48632253454A00404FCC /* AppDelegate.swift in Sources */,
+				F24483332254B5DB004E3D78 /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
